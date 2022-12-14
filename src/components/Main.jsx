@@ -9,8 +9,18 @@ const Main = () => {
   const initial = useRef(true);
 
   const content = () => {
-    if (isLoading) return <p>is loadingg...</p>;
-    if (error) return <p>Not Found</p>;
+    if (isLoading)
+      return (
+        <section className='display ta-center'>
+          <p>is loading...</p>
+        </section>
+      );
+    if (error)
+      return (
+        <section className='display ta-center'>
+          <p>Not Found</p>
+        </section>
+      );
     if (dict.title) {
       return (
         <section className='display ta-center'>

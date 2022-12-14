@@ -67,7 +67,7 @@ main {
   flex-direction: column;
   justify-content: end;
   flex: 1 0 80%;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 main > *:first-child {
@@ -171,7 +171,7 @@ body > svg {
   box-shadow: 0px 7px 21px hsl(var(--clr-dark) / 0.25);
   padding-inline: 5rem;
   border-radius: 1rem;
-  height: 10rem;
+  /* height: 10rem; */
   overflow: hidden;
   margin-top: auto;
 }

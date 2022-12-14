@@ -11,7 +11,7 @@ export const UseLookUp = () => {
       setError(false);
       setIsLoading(true);
 
-      fetch(
+      await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}`
       )
         .then((res) => res.json())
@@ -19,6 +19,7 @@ export const UseLookUp = () => {
     } catch (error) {
       setError(true);
     }
+
     setIsLoading(false);
   };
 
