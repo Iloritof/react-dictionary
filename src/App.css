@@ -339,6 +339,34 @@ footer a:hover svg {
   }
 }
 
+#logo {
+  display: inline;
+  fill: var(--clr-accent);
+  fill-opacity: 1;
+  stroke: none;
+  stroke-width: 0;
+  stroke-linecap: square;
+  stroke-dasharray: none;
+  stroke-opacity: 1;
+  font-style: italic;
+  font-size: 182.544px;
+  font-family: Metropolis;
+  -inkscape-font-specification: 'Metropolis, Italic';
+  text-align: end;
+  text-anchor: end;
+  fill: none;
+  stroke-width: 2.6621;
+  stroke-linecap: round;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-family: Archivo;
+  -inkscape-font-specification: Archivo;
+  fill-opacity: 1;
+  stroke-width: 2.6621;
+}
+
 /* audio::-webkit-media-controls-panel,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-play-button,
