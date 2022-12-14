@@ -76,7 +76,14 @@ const DicEntry = ({ data, callback }) => {
         {data && (
           <>
             <header>
-              <h1 className='fs-700'>{data.word}</h1>
+              <h1 className='fs-700'>
+                {data.word}
+                <audio controls>
+                  {data.phonetics.map((obj) => (
+                    <source src={obj.audio} type='audio/mp3' />
+                  ))}
+                </audio>
+              </h1>
               <p>{sound()}</p>
             </header>
             {data.meanings.map((meaning, i) => (

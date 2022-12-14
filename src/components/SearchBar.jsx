@@ -26,7 +26,7 @@ const SearchBar = ({ callback, value }) => {
         onChange={(e) => setSearchWord(e.target.value)}
       />
       <button type='submit'>
-        <svg viewBox='0 0 48 48'>
+        <svg viewBox='0 0 48 48' aria-label='search button'>
           <use href='#search' />
         </svg>
       </button>

@@ -12,19 +12,26 @@ const Main = () => {
     if (isLoading)
       return (
         <section className='display ta-center'>
-          <p>is loading...</p>
+          <div className='loader'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </section>
       );
     if (error)
       return (
         <section className='display ta-center'>
-          <p>Not Found</p>
+          <p>{searchWord} Not Found</p>
         </section>
       );
     if (dict.title) {
       return (
         <section className='display ta-center'>
-          <h1>{dict.title}</h1>
+          <h1>{searchWord}</h1>
+          <h3>{dict.title}</h3>
           <p>{dict.message}</p>
         </section>
       );

@@ -65,7 +65,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   flex: 1 0 80%;
   overflow-y: hidden;
 }
@@ -239,6 +239,12 @@ body > svg {
 .display {
   padding: 4rem 1rem 10rem;
   overflow-y: scroll;
+
+  & audio {
+    @media (min-width: 38.125em) {
+      padding-left: 5rem;
+    }
+  }
 }
 
 .display ol {
@@ -268,6 +274,7 @@ footer {
 footer svg {
   width: 2.5rem;
   fill: hsl(var(--clr-dark));
+  height: 2.5rem;
 }
 
 footer a:hover svg {
@@ -282,3 +289,88 @@ footer a:hover svg {
     align-items: center;
   }
 }
+.loader {
+  position: relative;
+}
+
+.loader div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50%;
+  display: inline-block;
+  width: 6rem;
+  aspect-ratio: 1;
+  border: 1rem solid hsl(var(--clr-accent) / 0.15);
+  border-right: 1rem solid transparent;
+  border-radius: 50%;
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+.loader div:nth-child(2) {
+  animation-delay: 50ms;
+  animation-duration: 300ms;
+}
+
+.loader div:nth-child(3) {
+  animation-delay: 100ms;
+  animation-duration: 700ms;
+}
+
+.loader div:nth-child(4) {
+  animation-delay: 300ms;
+  animation-duration: 40ms;
+}
+
+.loader div:nth-child(5) {
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* audio::-webkit-media-controls-panel,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-timeline-container,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-seek-back-button,
+audio::-webkit-media-controls-seek-forward-button,
+audio::-webkit-media-controls-fullscreen-button,
+audio::-webkit-media-controls-rewind-button,
+audio::-webkit-media-controls-return-to-realtime-button,
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
+}
+
+audio::-moz-media-controls-panel,
+audio::-moz-media-controls-mute-button,
+audio::-moz-media-controls-play-button,
+audio::-moz-media-controls-timeline-container,
+audio::-moz-media-controls-current-time-display,
+audio::-moz-media-controls-time-remaining-display,
+audio::-moz-media-controls-timeline,
+audio::-moz-media-controls-volume-slider-container,
+audio::-moz-media-controls-volume-slider,
+audio::-moz-media-controls-seek-back-button,
+audio::-moz-media-controls-seek-forward-button,
+audio::-moz-media-controls-fullscreen-button,
+audio::-moz-media-controls-rewind-button,
+audio::-moz-media-controls-return-to-realtime-button,
+audio::-moz-media-controls-toggle-closed-captions-button {
+  display: none;
+} */
